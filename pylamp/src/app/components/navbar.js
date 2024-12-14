@@ -3,7 +3,7 @@ import React from 'react';
 export default function Navbar() {
     return (
         <nav className="border-gray-200 xl:w-3/4 w-full self-center flex justify-center">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between p-4 w-full">
+            <div className="md:max-w-screen-xl flex flex-wrap items-center justify-between my-5 w-full">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/pylamp_logo.png" className="sm:h-20 h-12" alt="Pylamp Logo" />
                     <span className="self-center sm:text-2xl text-lg whitespace-nowrap uppercase text-orange-400 font-bold">Club Pylamp</span>

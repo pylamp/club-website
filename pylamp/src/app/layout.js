@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
       <head>
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
       </head>
-      <body className="flex flex-col w-screen">
+      <body className="flex flex-col bg-white">
         <Navbar />
         {children}
         <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
