@@ -1,4 +1,31 @@
+import TextImgCompo from "./components/text_img_compo";
+
 export default function HomePage() {
+  // List of data for TextImgCompo
+  const textImgData = [
+    {
+      imgSrc: "/rocket.png",
+      imgAlt: "rocket image",
+      title: "Our Mission",
+      desc: "Club PYLAMP promotes problem-solving and updates members on Computer Science trends, fostering close community and developing student leadership skills.",
+      imgPosition: "left",
+    },
+    {
+      imgSrc: "/group.png",
+      imgAlt: "group image",
+      title: "ENGAGING EVENTS",
+      desc: "Through workshops, hackathons, and competitions, we transform ideas into impactful solutions, providing hands-on experiences and opportunities to showcase talent and creativity.",
+      imgPosition: "right",
+    },
+    {
+      imgSrc: "/about.png",
+      imgAlt: "about image",
+      title: "INCLUSIVE COMMUNITY",
+      desc: "We value diversity and collaboration, creating a supportive environment where everyone can thrive. Our motto: Problem Solving Forever!",
+      imgPosition: "left",
+    },
+  ];
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-full">
@@ -22,14 +49,16 @@ export default function HomePage() {
                 />
                 Upcoming
               </button>
-              <span><i className="ph-light ph-arrow-right text-4xl"></i></span>
+              <span>
+                <i className="ph-light ph-arrow-right text-4xl"></i>
+              </span>
             </div>
           </div>
-            <img
-              src="/pylamp_logo.png"
-              alt="PyLamp CSE Logo"
-              className="sm:h-60 h-40 self-center"
-            />
+          <img
+            src="/pylamp_logo.png"
+            alt="PyLamp CSE Logo"
+            className="sm:h-60 h-40 self-center"
+          />
         </div>
       </div>
 
@@ -41,64 +70,18 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="flex justify-center p-5">
-          <div className="xl:w-3/4 w-full flex flex-col lg:flex-row justify-center lg:justify-between">
-            <div className="md:w-1/2 self-center flex justify-center">
-              <img
-                src="/rocket.png"
-                alt="Description of Image"
-                className="h-max-96"
-              />
-            </div>
-
-            <div className="lg:w-1/2 self-center p-5">
-              <h3 className="md:text-3xl text-xl font-bold mb-4">OUR MISSION</h3>
-              <p className="md:text-xl text-lg font-normal text-left">
-                Club PYLAMP promotes problem-solving and updates members on
-                Computer Science trends, fostering close community and developing
-                student leadership skills.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center p-5">
-          <div className="xl:w-3/4 w-full flex flex-col lg:flex-row justify-center lg:justify-between">
-            <div className="lg:w-1/2 self-center p-5">
-              <h3 className="md:text-3xl text-xl font-bold mb-4">ENGAGING EVENTS</h3>
-              <p className="md:text-xl text-lg font-normal text-left">
-                Through workshops, hackathons, and competitions, we transform ideas
-                into impactful solutions, providing hands-on experiences and
-                opportunities to showcase talent and creativity.
-              </p>
-            </div>
-            <div className="md:w-1/2 self-center flex justify-center">
-              <img src="/group.png" alt="Description of Image" className="h-max-96"/>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center p-5">
-          <div className="xl:w-3/4 w-full flex flex-col lg:flex-row justify-center lg:justify-between">
-            <div className="md:w-1/2 self-center flex justify-center">
-              <img
-                src="/about.png"
-                alt="Description of Image"
-                className="h-max-96"
-              />
-            </div>
-
-          <div className="lg:w-1/2 self-center p-5">
-            <h3 className="md:text-3xl text-xl font-bold mb-4">INCLUSIVE COMMUNITY</h3>
-            <p className="md:text-xl text-lg font-normal text-left">
-              We value diversity and collaboration, creating a supportive
-              environment where everyone can thrive. Our motto: Problem Solving
-              Forever!
-            </p>
-          </div>
-        </div>
-        </div>
-    </section>
+        {/* Map through textImgData to render TextImgCompo components */}
+        {textImgData.map((item, index) => (
+          <TextImgCompo
+            key={index}
+            imgSrc={item.imgSrc}
+            imgAlt={item.imgAlt}
+            title={item.title}
+            desc={item.desc}
+            imgPosition={item.imgPosition}
+          />
+        ))}
+      </section>
     </div>
   );
 }
