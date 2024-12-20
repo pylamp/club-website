@@ -1,5 +1,6 @@
 import TextImgCompo from "./components/text_img_compo";
 import Imgcenter from "./components/imgcenter";
+import ProfileCard from "./components/card";
 
 export default function HomePage() {
   
@@ -139,6 +140,16 @@ export default function HomePage() {
           />
         ))}
       </section>
+
+      <ProfileCard />
+      
+        <section className="bg-white mt-8 text-gray-800">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Blog News</h2>
+          
+        </div>
+        </section>
+
     </div>
   );
 }
