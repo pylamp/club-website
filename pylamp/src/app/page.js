@@ -1,7 +1,8 @@
 import TextImgCompo from "./components/text_img_compo";
+import Imgcenter from "./components/imgcenter";
 
 export default function HomePage() {
-  // List of data for TextImgCompo
+  
   const textImgData = [
     {
       imgSrc: "/rocket.png",
@@ -23,6 +24,25 @@ export default function HomePage() {
       title: "INCLUSIVE COMMUNITY",
       desc: "We value diversity and collaboration, creating a supportive environment where everyone can thrive. Our motto: Problem Solving Forever!",
       imgPosition: "left",
+    },
+  ];
+
+    const imgCenterData = [
+      {
+      imgSrc: "/profile.png",
+      imgAlt: "PyLamp CSE Logo",
+      title: "Club Advisor",
+      subtitle: "Nandhini M",
+      desc: "Assistant Professor, Department of Computer Science and Engineering, VCET",
+      imgPosition: "left",
+    }, 
+    {
+      imgSrc: "/profile.png",
+      imgAlt: "PyLamp CSE Logo",
+      title: "Club Mentor",
+      subtitle: "Vidhya S",
+      desc: "Assistant professor, Department of Computer Science and Engineering, VCET",
+      imgPosition: "right",
     },
   ];
 
@@ -96,6 +116,28 @@ export default function HomePage() {
             Honorees
           </a>
         </div>
+      </section>
+
+      <section className="bg-white mt-8 text-gray-800">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
+          <p className="text-lg md:text-xl font-medium text-gray-600">
+            Together towards victory
+          </p>
+        </div>
+        
+        {/* Map through imgCenterData to render Imgcenter components */}
+        {imgCenterData.map((item, index) => (
+          <Imgcenter
+            key={index}
+            imgSrc={item.imgSrc}
+            imgAlt={item.imgAlt}
+            title={item.title}
+            subtitle={item.subtitle}
+            desc={item.desc}
+            imgPosition={item.imgPosition}
+          />
+        ))}
       </section>
     </div>
   );
