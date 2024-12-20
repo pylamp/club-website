@@ -82,6 +82,21 @@ export default function HomePage() {
           />
         ))}
       </section>
+      <section className="flex items-center justify-center w-full">
+        <div className="relative w-4/5 md:w-3/4 lg:w-2/3 lg:h-128 h-96">
+          <img
+            src="/new.png"
+            alt="Centered Image"
+            className="w-full h-full object-contain" 
+          />
+          <a
+            href="/your-target-page" 
+            className="absolute bottom-3 left-5 md:left-50 sm:left-10 xs:static xs:mt-4 w-[194.82px] rounded-[25px] bg-black text-white py-2 px-4 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center z-10"
+          >
+            Honorees
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
       <body className="flex flex-col bg-white">
         <Navbar />
         {children}
-        <Footer />
+        <footer />
         <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
       </body>
     </html>
