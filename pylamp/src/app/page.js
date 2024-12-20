@@ -185,7 +185,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-12">
+      <section className=" py-12">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Testimonials
