@@ -1,6 +1,7 @@
 import TextImgCompo from "./components/text_img_compo";
 import Imgcenter from "./components/imgcenter";
 import ProfileCard from "./components/card";
+import TestimonialCard from "./components/testimonalcard";
 
 export default function HomePage() {
   
@@ -47,6 +48,29 @@ export default function HomePage() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "John D",
+      role: "Software Developer",
+      image: "/ts1.png", // Add actual image paths here
+      testimonial:
+        "Joining PyLamp has been a game-changer for me. The community is incredibly supportive and knowledgeable.",
+    },
+    {
+      name: "Jane S",
+      role: "Frontend Developer",
+      image: "/ts2.png",
+      testimonial:
+        "The support and resources available in PyLamp helped me excel in my career.",
+    },
+    {
+      name: "Mike T",
+      role: "Backend Engineer",
+      image: "/ts2.png",
+      testimonial:
+        "I learned a lot from the discussions and projects in this amazing community.",
+    },
+  ];
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-full">
@@ -108,10 +132,10 @@ export default function HomePage() {
           <img
             src="/new.png"
             alt="Centered Image"
-            className="w-full h-full object-contain" 
+            className="w-full h-full object-contain"
           />
           <a
-            href="/your-target-page" 
+            href="/your-target-page"
             className="absolute bottom-3 left-5 md:left-50 sm:left-10 xs:static xs:mt-4 w-[194.82px] rounded-[25px] bg-black text-white py-2 px-4 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center z-10"
           >
             Honorees
@@ -126,7 +150,7 @@ export default function HomePage() {
             Together towards victory
           </p>
         </div>
-        
+
         {/* Map through imgCenterData to render Imgcenter components */}
         {imgCenterData.map((item, index) => (
           <Imgcenter
@@ -142,14 +166,43 @@ export default function HomePage() {
       </section>
 
       <ProfileCard />
-      
-        <section className="bg-white mt-8 text-gray-800">
+
+      <section className="bg-white mt-8 text-gray-800">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Blog News</h2>
-          
         </div>
-        </section>
+        <div className="flex flex-col items-center">
+          <div className="w-full max-w-[900px] p-4 rounded-[70px] overflow-hidden ">
+            <img
+              src="blog.png" // Replace with your image URL
+              alt="Description of the image"
+              className="w-full h-auto object-cover transition-opacity duration-500 ease-in-out"
+            />
+          </div>
+          <p className="mt-4 text-lg md:text-m text-gray-600 max-w-2xl font-bold text-center">
+            Short Blog Description
+          </p>
+        </div>
+      </section>
 
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            Testimonials
+          </h2>
+          <div className="flex flex-wrap justify-center gap-10">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                name={testimonial.name}
+                role={testimonial.role}
+                image={testimonial.image}
+                testimonial={testimonial.testimonial}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
