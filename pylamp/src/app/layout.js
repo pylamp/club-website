@@ -10,8 +10,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className="flex flex-col bg-white">
         <Navbar />
-        {children}
-        <footer />
+        <div className="grow min-h-screen">
+          {children}
+        </div>
+        <Footer />
         <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
       </body>
     </html>

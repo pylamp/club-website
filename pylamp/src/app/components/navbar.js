@@ -3,7 +3,7 @@ export default function Navbar() {
     return (
         <nav className="border-gray-200 xl:w-3/4 w-full self-center flex justify-center">
             <div className="md:max-w-screen-xl flex flex-wrap items-center justify-between my-5 w-full">
-                <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/pylamp_logo.png" className="sm:h-20 h-12" alt="Pylamp Logo" />
                     <span className="self-center sm:text-2xl text-lg whitespace-nowrap uppercase text-orange-400 font-bold">Club Pylamp</span>
                 </a>
@@ -22,7 +22,7 @@ export default function Navbar() {
                             <a href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-100 font-bold md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0">Team Members</a>
                         </li>
                         <li>
-                            <a href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-100 font-bold md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0">Gallery</a>
+                            <a href="/gallery" className="block py-2 px-3 text-black rounded hover:bg-gray-100 font-bold md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0">Gallery</a>
                         </li>
                         <li>
                             <a href="#" className="block py-2 px-3 text-black rounded hover:bg-gray-100 font-bold md:hover:bg-transparent md:border-0 md:hover:text-black md:p-0">Contact Us</a>

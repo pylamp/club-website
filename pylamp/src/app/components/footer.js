@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <div className="flex p-5 bg-gradient-to-b from-slate-600 via-slate-800 to-slate-900">
             <div className="flex w-full justify-center">
-                <div className="flex lg:w-3/4 justify-between">
+                <div className="flex xl:w-3/4 justify-between">
                     <img className="hidden md:block h-44 mx-5" src="/small_girl.png" alt="A girl reading" />
                     <div className="mx-5 flex md:h-40 sm:self-end self-center w-full justify-between md:flex-row flex-col">
                         <div className="flex sm:flex-row flex-col">

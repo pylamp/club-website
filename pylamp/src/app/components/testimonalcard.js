@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function TestimonialCard({ name, role, image, testimonial }) {
   return (
-    <div className="w-full max-w-xl bg-white rounded-2xl shadow-lg shadow-gray-400 p-8 flex flex-col lg:flex-row items-center gap-8 min-h-[340px]">
+    <div className="w-full max-w-xl bg-white rounded-2xl shadow-lg shadow-gray-400 p-8 flex flex-col lg:flex-row items-center gap-8 min-h-[340px] justify-self-center">
       <div className="flex-shrink-0">
         <div className="w-26 h-26 md:w-36 md:h-32 lg:w-35 lg:h-36 rounded-full overflow-hidden border-4 border-gray-300">
           <Image
