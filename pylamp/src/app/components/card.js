@@ -67,7 +67,7 @@ export default function Card() {
           }
         }
         .animate-infinite-scroll {
-          animation: infinite-scroll 20s linear infinite;
+          animation: infinite-scroll 30s linear infinite;
         }
       `}</style>
     </div>

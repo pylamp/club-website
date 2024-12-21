@@ -135,20 +135,31 @@ export default function HomePage() {
         ))}
       </section>
       <section className="flex items-center justify-center w-full">
-        <div className="relative w-4/5 md:w-3/4 lg:w-2/3 lg:h-128 h-96">
+        <div className="relative lg:w-[60rem] sm:w-[40rem] w-[30rem]">
           <img
             src="/new.png"
             alt="Centered Image"
-            className="w-full h-full object-contain"
+            className="lg:w-[60rem] sm:w-[40rem] w-[30rem] object-contain"
+            
           />
           <a
             href="/your-target-page"
-            className="absolute bottom-3 left-5 md:left-50 sm:left-10 xs:static xs:mt-4 w-[194.82px] rounded-[25px] bg-black text-white py-2 px-4 transition-opacity duration-300 hover:opacity-100 flex items-center justify-center z-10"
+            className="absolute m-5 rounded-full sm:p-5 p-2 lg:w-60 sm:w-40 sm:text-xl text-sm sm:visible invisible bg-black hover:bg-slate-800 text-white bottom-0 left-0 flex items-center justify-center z-10"
           >
             Honorees
           </a>
+          
         </div>
       </section>
+      <div className="flex items-center justify-center w-full">
+
+        <a
+            href="/your-target-page"
+            className="m-5 rounded-full p-5 lg:w-60 w-40 sm:text-xl text-lg visible sm:invisible bg-black hover:bg-slate-800 text-white flex items-center justify-center z-10"
+          >
+            Honorees
+          </a>
+      </div>
 
       <section className="bg-white mt-8 text-gray-800">
         <div className="text-center mb-12">
