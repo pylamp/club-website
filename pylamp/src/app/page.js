@@ -70,6 +70,13 @@ export default function HomePage() {
       testimonial:
         "I learned a lot from the discussions and projects in this amazing community.",
     },
+  {
+    name: "Sara K",
+    role: "AI Engineer",
+    image: "/ts1.png",
+    testimonial:
+    "PyLamp has provided me with invaluable insights and a platform to grow my AI skills.",
+  }
   ];
   return (
     <div>
@@ -185,12 +192,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=" py-12">
+      <section className="py-12">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Testimonials
           </h2>
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={index}
