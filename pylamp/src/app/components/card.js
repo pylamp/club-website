@@ -35,15 +35,15 @@ export default function Card() {
   return (
     <div className="relative w-full h-full overflow-hidden">
       <div
-        className="flex overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+        className="flex overflow-hidden"
       >
         <ul
           ref={listRef}
           className="flex items-center justify-start whitespace-nowrap animate-infinite-scroll"
         >
           {cardData.map((data, index) => (
-            <li key={index} className="w-60 h-80 border-2 border-gray-200 rounded-xl shadow-md flex flex-col items-center justify-between p-4 m-2">
-              <h2 className="text-xl font-bold text-red-500 text-center truncate w-60">
+            <li key={index} className="md:w-60 w-40 h-80 border-2 border-gray-200 rounded-xl shadow-md flex flex-col items-center justify-between p-4 m-2">
+              <h2 className="md:text-xl text-sm font-bold text-red-500 text-center truncate md:w-60 w-32 ">
                 {data.title}
               </h2>
               <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-300 flex items-center justify-center">
