@@ -93,17 +93,19 @@ export default function HomePage() {
             </p>
 
             <div className="flex items-center space-x-4">
-              <button className="flex items-center px-4 py-2 bg-black text-white font-semibold rounded-lg shadow-md">
-                <img
-                  src="/calendar.png"
-                  alt="Calendar Icon"
-                  className="h-6 w-8 mr-2"
-                />
-                Upcoming
-              </button>
-              <span>
-                <i className="ph-light ph-arrow-right text-4xl"></i>
-              </span>
+              <a href="/upcoming" className="flex items-center space-x-4">
+                <button className="flex items-center px-4 py-2 bg-black text-white font-semibold rounded-lg shadow-md">
+                  <img
+                    src="/calendar.png"
+                    alt="Calendar Icon"
+                    className="h-6 w-8 mr-2"
+                  />
+                  Upcoming
+                </button>
+                <span>
+                  <i className="ph-light ph-arrow-right text-4xl"></i>
+                </span>
+              </a>
             </div>
           </div>
           <img
