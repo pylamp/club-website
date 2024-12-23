@@ -1,4 +1,11 @@
 export default function HonoureesPage() {
+    const events = [
+        {
+            imgSrc: "/honourees/events/poster1.png",
+            description: "Honoring top performers in different areas of excellence."
+        }
+    ];
+
     return (
         <div>
             <main className="flex w-full justify-center">
@@ -8,14 +15,16 @@ export default function HonoureesPage() {
                 </div>
             </main>
             <div className="flex flex-col justify-center w-full">
-                <div className="flex xl:w-3/4 self-center">
-                    <div className="flex sm:p-10 flex-col md:flex-row">
-                        <img src="/honourees/events/poster1.png" className="md:w-1/2 lg:max-w-md max-w-xs self-center p-5 w-60"/>
-                        <div className="flex flex-col p-5">
-                            <h4 className="md:text-4xl text-xl font-bold py-5">Event Description :</h4>
-                            <p className="md:text-2xl text-md font-medium">"Honoring top performers in different areas of excellence."</p>
-                        </div>
-                    </div>
+                <div className="flex xl:w-3/4 self-center flex-col">
+                        {events.map((event, index) => (
+                            <div key={index} className="flex sm:p-10 flex-col md:flex-row">
+                                <img src={event.imgSrc} className="md:w-1/2 lg:max-w-md max-w-xs self-center p-5 w-60"/>
+                                <div className="flex flex-col p-5">
+                                    <h4 className="md:text-4xl text-xl font-bold py-5">Event Description :</h4>
+                                    <p className="md:text-2xl text-md font-medium">{event.description}</p>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>
