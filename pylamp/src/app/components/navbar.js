@@ -5,7 +5,7 @@ export default function Navbar() {
             <div className="md:max-w-screen-xl flex flex-wrap items-center justify-between my-5 w-full">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="/pylamp_logo.png" className="sm:h-20 h-12" alt="Pylamp Logo" />
-                    <span className="self-center sm:text-2xl text-lg whitespace-nowrap uppercase text-orange-400 font-bold">Club Pylamp</span>
+                    <span className="self-center sm:text-2xl text-sm whitespace-nowrap uppercase text-orange-400 font-bold">Club Pylamp</span>
                 </a>
                 <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
                     <span className="sr-only">Open main menu</span>

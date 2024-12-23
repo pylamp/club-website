@@ -16,7 +16,7 @@ const ResponsiveGrid = () => {
   return (
     <div className=" min-h-screen py-8 flex flex-col justify-between">
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl font-bold text-center mb-6">
+        <h1 className="sm:text-6xl text-3xl font-bold text-center mb-6">
           Events of 2024-25
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
