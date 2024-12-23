@@ -6,6 +6,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <title>PyLamp</title>
+        <link rel="icon" href="/pylamp_logo.png" type="image/png" />
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
       </head>
       <body className="flex flex-col bg-white min-h-screen">

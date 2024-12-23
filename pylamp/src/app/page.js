@@ -145,7 +145,7 @@ export default function HomePage() {
             
           />
           <a
-            href="/your-target-page"
+            href="/honourees"
             className="absolute m-5 rounded-full sm:p-5 p-2 lg:w-60 sm:w-40 sm:text-xl text-sm sm:visible invisible bg-black hover:bg-slate-800 text-white bottom-0 left-0 flex items-center justify-center z-10"
           >
             Honorees
@@ -156,7 +156,7 @@ export default function HomePage() {
       <div className="flex items-center justify-center w-full">
 
         <a
-            href="/your-target-page"
+            href="/honourees"
             className="m-5 rounded-full p-5 lg:w-60 w-40 sm:text-xl text-lg visible sm:invisible bg-black hover:bg-slate-800 text-white flex items-center justify-center z-10"
           >
             Honorees
