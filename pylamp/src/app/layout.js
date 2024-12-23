@@ -8,9 +8,9 @@ export default function RootLayout({ children }) {
       <head>
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
       </head>
-      <body className="flex flex-col bg-white">
+      <body className="flex flex-col bg-white min-h-screen">
         <Navbar />
-        <div className="grow min-h-screen">
+        <div className="grow">
           {children}
         </div>
         <Footer />
