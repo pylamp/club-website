@@ -1,19 +1,30 @@
-export default function GalleryPage() {
-    return(
+export default function HonoureesPage() {
+    const events = [
+        {
+            imgSrc: "/honourees/events/poster1.png",
+            description: "Honoring top performers in different areas of excellence."
+        }
+    ];
+
+    return (
         <div>
             <main className="flex w-full justify-center">
-                <div className="flex justify-center m-5 sm:w-3/4 self-center">
-                    <div className="bg-slate-200 lg:w-1/2 p-5 text-center self-center">
-                        <h2 className="lg:text-2xl text-md">"Catch the Excitement! Join Our Upcoming Events and Dive into New Opportunities!"</h2>
-                    </div>
+                <div className="flex m-5 xl:w-3/4 self-center sm:flex-row flex-col">
+                    <img src="/honourees/im1.png" alt="A girl holding medal in hand" className="lg:w-96 md:w-80 sm:w-40 w-32 self-center" />
+                    <h3 className="lg:text-4xl sm:text-2xl text-lg font-bold self-center text-center py-5 sm:p-0">"Honoring top performers in different areas of excellence."</h3>
                 </div>
             </main>
-            <div className="mt-20 mb-5">
-                <h2 className="lg:text-6xl sm:text-3xl text-xl font-bold text-center uppercase">Coming Soon....</h2>
-            </div>
-            <div className="flex w-full flex-col h-full">
-                <div className="mb-10 p-5 justify-center w-full flex">
-                    <img src="/upcoming/poster1.png" alt="Upcoming Events" className="xl:max-w-5xl lg:max-w-2xl sm:max-w-lg w-60 sm:w-full self-center" />
+            <div className="flex flex-col justify-center w-full">
+                <div className="flex xl:w-3/4 self-center flex-col">
+                        {events.map((event, index) => (
+                            <div key={index} className="flex sm:p-10 flex-col md:flex-row">
+                                <img src={event.imgSrc} className="md:w-1/2 lg:max-w-md max-w-xs self-center p-5 w-60"/>
+                                <div className="flex flex-col p-5">
+                                    <h4 className="md:text-4xl text-xl font-bold py-5">Event Description :</h4>
+                                    <p className="md:text-2xl text-md font-medium">{event.description}</p>
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>

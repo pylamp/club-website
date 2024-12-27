@@ -80,13 +80,13 @@ export default function HomePage() {
   ];
   return (
     <div>
-      <div className="flex flex-col items-center justify-center w-full">
-        <div className="xl:w-3/4 w-full m-5 lg:m-0 flex flex-col md:flex-row">
+      <div className="flex flex-col-reverse items-center justify-center w-full">
+        <div className="xl:w-3/4 w-full m-5 lg:m-0 flex flex-col-reverse md:flex-row">
           <div className="text-left space-y-4 ml-4 p-4 self-center">
-            <h1 className="lg:text-6xl text-4xl font-bold text-black">
+            <h1 className="lg:text-6xl text-4xl font-bold text-black mb-5">
               Welcome <span className="text-orange-500">PyGeeks</span>
             </h1>
-            <p className="text-justify md:text-2xl md:w-3/4 text-lg font-normal">
+            <p className="text-justify md:text-2xl md:w-3/4 text-lg font-normal py-3">
               Join us to empower your coding journey, develop leadership skills,
               and innovate together in a community that values excellence and
               collaboration.
@@ -117,8 +117,8 @@ export default function HomePage() {
       </div>
 
       <section className="bg-white mt-5 text-gray-800">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">ABOUT US</h2>
+        <div className="text-center mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">ABOUT US</h2>
           <p className="text-lg md:text-xl font-medium text-gray-600">
             Inspiring Coders, Shaping Leaders
           </p>
@@ -163,7 +163,7 @@ export default function HomePage() {
           </a>
       </div>
 
-      <section className="bg-white mt-8 text-gray-800">
+      <section className="bg-white mt-8 text-gray-800 mb-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
           <p className="text-lg md:text-xl font-medium text-gray-600">
