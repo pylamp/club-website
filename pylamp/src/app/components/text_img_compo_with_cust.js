@@ -1,7 +1,8 @@
 export default function TextImgCompoWithCust({ imgSrc, imgAlt, imgPosition, children }) {
     return (
         <div className="flex justify-center p-5">
-            <div className="xl:w-3/4 w-full flex flex-col lg:flex-row justify-center lg:justify-between">
+            <div className={`xl:w-3/4 w-full flex flex-col lg:flex-row justify-center ${
+          imgPosition === "right" ? "flex-col-reverse" : ""}`}>
                 {imgPosition === 'left' && (
                     <div className="md:w-2/5 self-center flex flex-col">
                         <img src={imgSrc} alt={imgAlt} className="lg:h-80 sm:h-60 h-40 self-center" />
