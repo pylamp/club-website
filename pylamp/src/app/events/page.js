@@ -62,7 +62,7 @@ export default function Home() {
   ];
   return (
     <div>
-      <h1 className="md:text-5xl sm:text-3xl text-lg font-bold text-center mb-6">
+      <h1 className="md:text-5xl sm:text-3xl text-2xl font-bold text-center mb-6">
           Events of 2024-25
         </h1>
       <ResponsiveGrid events={events} />
