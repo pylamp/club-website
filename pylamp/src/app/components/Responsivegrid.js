@@ -17,9 +17,15 @@ const ResponsiveGrid = ({ events }) => {
                   className="rounded-lg"
                 />
               </div>
-              <p className="text-center mt-2 text-sm font-medium">
-                {event.name}
-              </p>
+              <div className="text-left mt-4">
+                <p className="font-bold text-xl">Event name: {event.name}</p>
+                <p className="font-bold text-lg text-gray-700 mt-1">
+                  Event Date: {event.date}
+                </p>
+                <p className="text-base mt-2 text-gray-600">
+                  {event.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
