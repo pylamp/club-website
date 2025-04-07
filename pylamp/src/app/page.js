@@ -81,7 +81,7 @@ export default function HomePage() {
   return (
     <div>
       <div className="flex flex-col-reverse items-center justify-center w-full">
-        <div className="xl:w-3/4 w-full m-5 lg:m-0 flex flex-col-reverse md:flex-row">
+        <div className="xl:w-3/4 w-full m-5 lg:m-0 flex flex-col-reverse md:flex-row group">
           <div className="text-left space-y-4 ml-4 p-4 self-center">
             <h1 className="lg:text-6xl text-4xl font-bold text-black mb-5">
               Welcome <span className="text-orange-500">PyGeeks</span>
@@ -102,7 +102,7 @@ export default function HomePage() {
                   />
                   Upcoming
                 </button>
-                <span>
+                <span className="group-hover:animate-slide-out-right">
                   <i className="ph-light ph-arrow-right text-4xl"></i>
                 </span>
               </a>
@@ -125,53 +125,54 @@ export default function HomePage() {
         </div>
 
         {/* Map through textImgData to render TextImgCompo components */}
-        {textImgData.map((item, index) => (
-          <TextImgCompo
-            key={index}
-            imgSrc={item.imgSrc}
-            imgAlt={item.imgAlt}
-            title={item.title}
-            desc={item.desc}
-            imgPosition={item.imgPosition}
-          />
-        ))}
-      </section>
-      <section className="flex items-center justify-center w-full">
-        <div className="relative lg:w-[60rem] sm:w-[40rem] w-[30rem]">
-          <img
-            src="/new.png"
-            alt="Centered Image"
-            className="lg:w-[60rem] sm:w-[40rem] w-[30rem] object-contain"
-            
-          />
+          {textImgData.map((item, index) => (
+            <TextImgCompo
+              key={index}
+              imgSrc={item.imgSrc}
+              imgAlt={item.imgAlt}
+              title={item.title}
+              desc={item.desc}
+              imgPosition={item.imgPosition}
+            />
+          ))}
+              </section>
+              <section className="flex items-center justify-center w-full">
+          <div className="relative lg:w-[60rem] sm:w-[40rem] w-[30rem] group">
+            <img
+              src="/new.png"
+              alt="Club pylamp learning today, Solving for tomorrow"
+              className="lg:w-[60rem] sm:w-[40rem] w-[30rem] object-contain"
+              aria-label="Club pylamp learning today, Solving for tomorrow"
+            />
+            <a
+              href="/honourees"
+              className="absolute m-5 rounded-full sm:p-5 p-2 lg:w-60 sm:w-40 sm:text-xl text-sm sm:visible invisible bg-black hover:bg-slate-800 text-white bottom-0 left-0 flex items-center justify-center z-10 group-hover:animate-shake-lr"
+              aria-label="View Honorees"
+            >
+              Honorees
+            </a>
+          </div>
+              </section>
+              {/* This div and honoureees button is for the button display in small screens */}
+              <div className="flex items-center justify-center w-full">
           <a
             href="/honourees"
-            className="absolute m-5 rounded-full sm:p-5 p-2 lg:w-60 sm:w-40 sm:text-xl text-sm sm:visible invisible bg-black hover:bg-slate-800 text-white bottom-0 left-0 flex items-center justify-center z-10"
-          >
-            Honorees
-          </a>
-          
-        </div>
-      </section>
-      <div className="flex items-center justify-center w-full">
-
-        <a
-            href="/honourees"
             className="m-5 rounded-full p-5 lg:w-60 w-40 sm:text-xl text-lg visible sm:invisible bg-black hover:bg-slate-800 text-white flex items-center justify-center z-10"
+            aria-label="View Honorees"
           >
             Honorees
           </a>
-      </div>
+              </div>
 
-      <section className="bg-white mt-8 text-gray-800 mb-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
-          <p className="text-lg md:text-xl font-medium text-gray-600">
-            Together towards victory
-          </p>
-        </div>
+              <section className="bg-white mt-8 text-gray-800 mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
+            <p className="text-lg md:text-xl font-medium text-gray-600">
+              Together towards victory
+            </p>
+          </div>
 
-        {/* Map through imgCenterData to render Imgcenter components */}
+          {/* Map through imgCenterData to render Imgcenter components */}
         {imgCenterData.map((item, index) => (
           <Imgcenter
             key={index}
