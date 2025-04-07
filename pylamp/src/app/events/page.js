@@ -1,27 +1,19 @@
+// pages/index.js
+import Link from "next/link";
 import ResponsiveGrid from "../components/Responsivegrid";
 import React from "react";
 
-// Convert Google Drive share URL to direct-viewable image URL
 const convertDriveLink = (url) => {
-  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)\//);
+  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
   return match ? `https://drive.google.com/uc?export=view&id=${match[1]}` : url;
 };
 
-// Format date string nicely (e.g., April 8, 2025)
-const formatDate = (dateString) => {
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-};
-
 export default async function Home() {
-  const response = await fetch("https://property-management-server-chi.vercel.app/events");
+  const response = await fetch("https://property-management-server-chi.vercel.app/events", {
+    cache: "no-store"
+  });
   const fetchedData = await response.json();
 
-  // Optional: static events
   const events = [
     {
       id: 1,
@@ -32,12 +24,15 @@ export default async function Home() {
     },
   ];
 
-  // Fetched events with formatted dates and Drive image links
   const fetchedEvents = fetchedData.map((item) => ({
     id: item._id,
     name: item.name,
     imgSrc: convertDriveLink(item.img),
-    date: formatDate(item.eventDate),
+    date: new Date(item.eventDate).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
     description: item.description,
   }));
 

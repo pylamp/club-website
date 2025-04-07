@@ -1,5 +1,6 @@
 // ResponsiveGrid.js
 import Image from "next/image";
+import Link from "next/link";
 
 const ResponsiveGrid = ({ events }) => {
   return (
@@ -7,6 +8,7 @@ const ResponsiveGrid = ({ events }) => {
       <div className="xl:w-3/4 w-full self-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:p-10 p-5">
           {events.map((event) => (
+            <Link key={event.id} href={`/events/${event.id}`} passHref>
             <div key={event.id} className="w-full max-w-[636px] mx-auto">
               <div className="relative aspect-square">
                 <Image
@@ -27,6 +29,7 @@ const ResponsiveGrid = ({ events }) => {
                 </p>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
